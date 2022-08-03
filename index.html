@@ -1,15 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Groceries</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="assets/index.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-size=1">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
-
+    <main>
+        <header>
+            <div class="user">
+                <img class="user__avatar" alt="%id" width="48" height="48" src="assets/img/default_avatar.svg">
+                <div>
+                    <span class="user__welcome">good morning</span>
+                    <h4 class="user__name">John Jack</h4>
+                </div>
+            </div>
+            <label for="location" class="location">
+                <select id="location">
+                    <option value="0" selected>Flat</option>
+                    <option value="1">House</option>
+                    <option value="2">Office</option>
+                </select>
+            </label>
+        </header>
+        <div>
+            <label for="search" class="search">
+                <button>
+                    <img src="assets/img/search.svg" width="22" height="22" alt="search">
+                </button>
+                <input class="search__input" id="search" type="text" placeholder="Search groceries">
+            </label>
+            <img class="banner" src="assets/img/banner.png" alt="banner">
+        </div>
+        <div>
+            <div class="title">
+                <h3>Categories</h3>
+                <a href="#">See all</a>
+            </div>
+            <div class="v-grid">
+                <div class="category">
+                    <img alt="category" src="assets/img/default_category.svg">
+                    <span>Category</span>
+                </div>
+                <div class="category">
+                    <img alt="category" src="assets/img/default_category.svg">
+                    <span>Category</span>
+                </div>
+                <div class="category">
+                    <img alt="category" src="assets/img/default_category.svg">
+                    <span>Category</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="title">
+                <h3>Best selling</h3>
+                <a href="#">See all</a>
+            </div>
+            <div class="catalog">
+                <div class="item">
+                    <div class="item__preview">
+                        <img src="assets/img/default_item.png" alt="item">
+                    </div>
+                    <h4>Name</h4>
+                    <h3 class="item__info">1kg, 4$</h3>
+                    <button class="item__buy"></button>
+                </div>
+                <div class="item">
+                    <div class="item__preview">
+                        <img src="assets/img/default_item.png" alt="item">
+                    </div>
+                    <h4>Name</h4>
+                    <h3 class="item__info">1kg, 4$</h3>
+                    <button class="item__buy"></button>
+                </div>
+                <div class="item">
+                    <div class="item__preview">
+                        <img src="assets/img/default_item.png" alt="item">
+                    </div>
+                    <h4>Name</h4>
+                    <h3 class="item__info">1kg, 4$</h3>
+                    <button class="item__buy"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="menu">
+        <nav>
+            <button class="navigator--active">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.05 6.81774L14.29 2.78774C12.72 1.68774 10.31 1.74774 8.8 2.91774L3.79 6.82774C2.79 7.60774 2 9.20774 2 10.4677V17.3677C2 19.9177 4.07 21.9977 6.62 21.9977H17.4C19.95 21.9977 22.02 19.9277 22.02 17.3777V10.5977C22.02 9.24774 21.15 7.58774 20.05 6.81774ZM12.76 17.9977C12.76 18.4077 12.42 18.7477 12.01 18.7477C11.6 18.7477 11.26 18.4077 11.26 17.9977V14.9977C11.26 14.5877 11.6 14.2477 12.01 14.2477C12.42 14.2477 12.76 14.5877 12.76 14.9977V17.9977Z"/>
+                </svg>
+            </button>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.24 2H5.34C3.15 2 2 3.15 2 5.33V7.23C2 9.41 3.15 10.56 5.33 10.56H7.23C9.41 10.56 10.56 9.41 10.56 7.23V5.33C10.57 3.15 9.42 2 7.24 2Z"/>
+                    <path d="M18.6699 2H16.7699C14.5899 2 13.4399 3.15 13.4399 5.33V7.23C13.4399 9.41 14.5899 10.56 16.7699 10.56H18.6699C20.8499 10.56 21.9999 9.41 21.9999 7.23V5.33C21.9999 3.15 20.8499 2 18.6699 2Z"/>
+                    <path d="M18.6699 13.43H16.7699C14.5899 13.43 13.4399 14.58 13.4399 16.76V18.66C13.4399 20.84 14.5899 21.99 16.7699 21.99H18.6699C20.8499 21.99 21.9999 20.84 21.9999 18.66V16.76C21.9999 14.58 20.8499 13.43 18.6699 13.43Z"/>
+                    <path d="M7.24 13.43H5.34C3.15 13.43 2 14.58 2 16.76V18.66C2 20.85 3.15 22 5.33 22H7.23C9.41 22 10.56 20.85 10.56 18.67V16.77C10.57 14.58 9.42 13.43 7.24 13.43Z"/>
+                </svg>
+            </button>
+            <button class="navigator--big">
+                <svg width="24" height="24" viewBox="-2 -2 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.24 3.5825H16.84L13.46 0.2025C13.19 -0.0675 12.75 -0.0675 12.47 0.2025C12.2 0.4725 12.2 0.9125 12.47 1.1925L14.86 3.5825H5.14L7.53 1.1925C7.8 0.9225 7.8 0.4825 7.53 0.2025C7.26 -0.0675 6.82 -0.0675 6.54 0.2025L3.17 3.5825H2.77C1.87 3.5825 0 3.5825 0 6.1425C0 7.1125 0.2 7.7525 0.62 8.1725C0.86 8.4225 1.15 8.5525 1.46 8.6225C1.75 8.6925 2.06 8.7025 2.36 8.7025H17.64C17.95 8.7025 18.24 8.6825 18.52 8.6225C19.36 8.4225 20 7.8225 20 6.1425C20 3.5825 18.13 3.5825 17.24 3.5825Z"/>
+                    <path d="M17.05 10.0025H2.87003C2.25003 10.0025 1.78003 10.5525 1.88003 11.1625L2.72003 16.3025C3.00003 18.0225 3.75003 20.0025 7.08003 20.0025H12.69C16.06 20.0025 16.66 18.3125 17.02 16.4225L18.03 11.1925C18.15 10.5725 17.68 10.0025 17.05 10.0025ZM8.61003 16.4525C8.61003 16.8425 8.30003 17.1525 7.92003 17.1525C7.53003 17.1525 7.22003 16.8425 7.22003 16.4525V13.1525C7.22003 12.7725 7.53003 12.4525 7.92003 12.4525C8.30003 12.4525 8.61003 12.7725 8.61003 13.1525V16.4525ZM12.89 16.4525C12.89 16.8425 12.58 17.1525 12.19 17.1525C11.81 17.1525 11.49 16.8425 11.49 16.4525V13.1525C11.49 12.7725 11.81 12.4525 12.19 12.4525C12.58 12.4525 12.89 12.7725 12.89 13.1525V16.4525Z"/>
+                </svg>
+            </button>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.75 4.25V2.75C8.75 2.34 8.41 2 8 2C7.59 2 7.25 2.34 7.25 2.75V4.31C7.5 4.28 7.73 4.25 8 4.25H8.75Z"/>
+                    <path d="M16.75 4.31V2.75C16.75 2.34 16.41 2 16 2C15.59 2 15.25 2.34 15.25 2.75V4.25H16C16.27 4.25 16.5 4.28 16.75 4.31Z"/>
+                    <path d="M16.75 4.31V5.75C16.75 6.16 16.41 6.5 16 6.5C15.59 6.5 15.25 6.16 15.25 5.75V4.25H8.75V5.75C8.75 6.16 8.41 6.5 8 6.5C7.59 6.5 7.25 6.16 7.25 5.75V4.31C4.3 4.58 3 6.48 3 9.25V17.75C3 20.75 4.5 22.75 8 22.75H16C19.5 22.75 21 20.75 21 17.75V9.25C21 6.48 19.7 4.58 16.75 4.31ZM12 17.5H8C7.59 17.5 7.25 17.16 7.25 16.75C7.25 16.34 7.59 16 8 16H12C12.41 16 12.75 16.34 12.75 16.75C12.75 17.16 12.41 17.5 12 17.5ZM16 12.5H8C7.59 12.5 7.25 12.16 7.25 11.75C7.25 11.34 7.59 11 8 11H16C16.41 11 16.75 11.34 16.75 11.75C16.75 12.16 16.41 12.5 16 12.5Z"/>
+                </svg>
+            </button>
+            <button>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.09 12C14.8514 12 17.09 9.76142 17.09 7C17.09 4.23858 14.8514 2 12.09 2C9.32854 2 7.08997 4.23858 7.08997 7C7.08997 9.76142 9.32854 12 12.09 12Z"/>
+                    <path d="M12.09 14.5C7.08 14.5 3 17.86 3 22C3 22.28 3.22 22.5 3.5 22.5H20.68C20.96 22.5 21.18 22.28 21.18 22C21.18 17.86 17.1 14.5 12.09 14.5Z"/>
+                </svg>
+            </button>
+        </nav>
+    </div>
 </body>
 </html>
