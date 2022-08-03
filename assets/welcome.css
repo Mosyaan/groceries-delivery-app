@@ -1,0 +1,34 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    overflow-y: auto;
+    background: url("img/welcome_groceries.png") no-repeat bottom center;
+    background-size: 360px auto;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 700;
+}
+
+.block {
+    margin: 170px 32px;
+    display: grid;
+    gap: 96px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+button {
+    border: none;
+    outline: rgba(255, 100, 64, 0.50);
+    background-color: #FF6440;
+    color: #FFF;
+    border-radius: 22px;
+    padding: 18px 70px;
+    font-size: 20px;
+}
