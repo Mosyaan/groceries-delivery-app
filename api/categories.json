@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "count": 4,
+  "items": [
+    {
+      "id": 0,
+      "name": "fruits",
+      "image": "api/assets/categories/0.svg"
+    },
+    {
+      "id": 1,
+      "name": "vegetables",
+      "image": "api/assets/categories/1.svg"
+    },
+    {
+      "id": 2,
+      "name": "diary",
+      "image": "api/assets/categories/2.svg"
+    },
+    {
+      "id": 3,
+      "name": "meat",
+      "image": "api/assets/categories/3.svg"
+    }
+  ]
+}

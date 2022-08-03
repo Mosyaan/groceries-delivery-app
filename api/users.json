@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "count": 0,
+  "items": [
+    {
+      "id": 0,
+      "avatar": "api/users/0.png",
+      "first_name": "Олег",
+      "last_name": "Очкович",
+      "email": "oleg.ochko@mail",
+      "password": "oleg123"
+    },
+    {
+      "id": 1,
+      "avatar": "api/users/1.png",
+      "first_name": "Наталья",
+      "last_name": "Морская",
+      "email": "natali@pen.is",
+      "password": "strongpassword"
+    }
+  ]
+}
