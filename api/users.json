@@ -4,7 +4,7 @@
   "items": [
     {
       "id": 0,
-      "avatar": "api/users/0.png",
+      "avatar": "api/assets/users/0.png",
       "first_name": "Олег",
       "last_name": "Очкович",
       "email": "oleg.ochko@mail",
@@ -12,7 +12,7 @@
     },
     {
       "id": 1,
-      "avatar": "api/users/1.png",
+      "avatar": "api/assets/users/1.png",
       "first_name": "Наталья",
       "last_name": "Морская",
       "email": "natali@pen.is",

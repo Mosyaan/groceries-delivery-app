@@ -9,38 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
     <link href="assets/cart.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="cart.js"></script>
 
 </head>
 <body>
 
     <div class="wrapper">
         <div class="head">
-            <button class="material-symbols-outlined">arrow_back_ios_new</button>
+            <button onclick="location.assign('index.html')" class="material-symbols-outlined">arrow_back_ios_new</button>
             <a>cart</a>
         </div>
     </div>
 
     <div class="relate">
 
-        <div class="cards">
-
-            <div class="card">
-                <img src="assets/img/red_pepper.png" alt="">
-                <div class="info">
-                    <p>Bell Pepper Red</p>
-                    <p>1kg, 6$</p>
-                </div>
-                <div class="amount">
-                    <button class="minus"></button>
-                    <p>1</p>
-                    <button class="plus"></button>
-                </div>
-            </div>
-
-        </div>
+        <div class="cards"></div>
 
         <div class="but">
-            <button class="checkout" type="submit">checkout</button>
+            <button class="checkout" type="submit" disabled>checkout</button>
         </div>
 
     </div>

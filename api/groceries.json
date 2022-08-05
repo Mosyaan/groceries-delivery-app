@@ -16,7 +16,7 @@
       "image": "api/assets/groceries/1.png",
       "name": "Fresh Spinach",
       "description": "Spinach is a leafy green flowering plant native to central and western Asia. It is of the order Caryophyllales, family Amaranthaceae, subfamily Chenopodioideae.",
-      "weight": 1000,
+      "weight": 500,
       "category_id": 1,
       "price": 4
     },
@@ -43,7 +43,7 @@
       "image": "api/assets/groceries/4.png",
       "name": "Organic Carrots",
       "description": "The carrot is a root vegetable, typically orange in color, though purple, black, red, white, and yellow cultivars exist, all of which are domesticated forms of the wild carrot, Daucus carota, native to Europe and Southwestern Asia.",
-      "weight": 1000,
+      "weight": 1252,
       "category_id": 1,
       "price": 2
     }

@@ -161,6 +161,7 @@ a[href] {
     display: inline-grid;
     gap: 8px;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .category img {

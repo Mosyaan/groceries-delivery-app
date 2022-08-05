@@ -119,3 +119,7 @@ a {
     padding-bottom: 100px;
     flex: 1;
 }
+
+.checkout[disabled] {
+    background-color: #929292;
+}

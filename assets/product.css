@@ -42,7 +42,7 @@ body {
     gap: normal;
 }
 
-.amount {
+.counter {
     display: flex;
     align-items: center;
     justify-content: space-between;
