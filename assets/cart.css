@@ -1,13 +1,19 @@
 body {
-    display: grid;
+    display: flex;
     font-family: 'DM Sans', sans-serif;
     font-weight: bold;
     margin: 0;
+    flex-direction: column;
+}
+
+html, body {
+    height: 100%;
 }
 
 .wrapper {
     padding: 24px;
     width: 390px;
+    box-sizing: border-box;
 }
 
 .head {
@@ -84,4 +90,32 @@ a {
 .info p:nth-child(2) {
     color: #FF324B;
     margin: 4px;
+}
+
+.but {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+}
+
+.checkout {
+    border: none;
+    outline: rgba(255, 100, 64, 0.50);
+    background-color: #FF6440;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 10px 116px;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-transform: capitalize;
+}
+
+.relate {
+    position: relative;
+    padding-bottom: 100px;
+    flex: 1;
 }
