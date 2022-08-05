@@ -30,6 +30,7 @@ getData('api/groceries.json', (data) => {
                      <p>${amount}</p>
                      <button class="plus"></button>
                   </div>
+                  <button class="remove"></button>
         `;
         document.querySelector('div.cards').append(div);
     });

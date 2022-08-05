@@ -12,6 +12,7 @@ function serializeWeight(grams) {
 const domLocation = document.querySelector('label.location>select');
 const domCategories = document.querySelector('div.categories');
 const domCatalog = document.querySelector('div.catalog');
+const domCartAmount = document.querySelector('span.cart_amount');
 
 // Actions
 function addLocation({ id, name }) {
@@ -71,7 +72,7 @@ function loadItems() {
 }
 
 function listenBuy() {
-    document.querySelectorAll('button.item__buy').forEach((elem) => {
+    document.querySelectorAll('div.item').forEach((elem) => {
         elem.addEventListener('click', () => {
             let id = Number(elem.dataset.id);
             let object = groceries.find((prod) => prod.id === id);
@@ -101,6 +102,15 @@ function userData() {
     });
 }
 
+function cartDisplay() {
+    const data = JSON.parse(localStorage.getItem('cart') || '[]');
+    if (data.length > 0) {
+        domCartAmount.removeAttribute('disabled')
+        domCartAmount.textContent = data.length.toString();
+    }
+}
+
 userData();
+cartDisplay();
 loadCategories();
 loadItems();

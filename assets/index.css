@@ -40,6 +40,23 @@ nav > button {
     background: #23AA49;
     padding: 12px;
     border-radius: 100%;
+    position: relative;
+}
+
+.cart_amount {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #FF8A8A;
+    height: 18px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    padding: 0 4px;
+    font-size: 16px;
+}
+
+.cart_amount[disabled] {
+    display: none;
 }
 
 body {

@@ -78,6 +78,18 @@ a {
     border: none;
 }
 
+.remove {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-image: url("img/plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #c72424;
+    transform: rotate(45deg);
+    border: none;
+}
+
 .info {
     flex: 1;
 }

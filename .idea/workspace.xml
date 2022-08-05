@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1168f98d-fde2-4a63-9449-1a8efdfb8543" name="Changes" comment="delete .idea">
+    <list default="true" id="1168f98d-fde2-4a63-9449-1a8efdfb8543" name="Changes" comment="implement addresses &amp; code refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cart.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/cart.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659707805286</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="implement addresses &amp; code refactor">
+      <created>1659738687528</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1659738687528</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cart &amp; card" />
-    <option name="LAST_COMMIT_MESSAGE" value="cart &amp; card" />
+    <MESSAGE value="implement addresses &amp; code refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement addresses &amp; code refactor" />
   </component>
 </project>
