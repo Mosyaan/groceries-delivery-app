@@ -1,50 +1,87 @@
-let groceries = [];
-
-function serializeWeight(grams) {
-    return Math.round(grams / 10) / 100 + 'kg';
-}
-
+// Utils
 function getData(api, func) {
     fetch(api).then((response) => {
         response.json().then(func);
     });
 }
-
-function addCategories() {
-    getData('api/categories.json', (data) => {
-        data.items.forEach((elem) => {
-            const {name, image} = elem;
-            let div = document.createElement('div');
-            div.className = 'category';
-            div.innerHTML = `<img alt="category" src="${image}">
-<span>${name}</span>`;
-            document.querySelector('div.categories').append(div);
-        });
-    });
+function serializeWeight(grams) {
+    return `${Math.round(grams / 10) / 100}kg`;
 }
 
-function addItems() {
+// Selectors
+const domLocation = document.querySelector('label.location>select');
+const domCategories = document.querySelector('div.categories');
+const domCatalog = document.querySelector('div.catalog');
+
+// Actions
+function addLocation({ id, name }) {
+    const option = document.createElement('option');
+    option.value = id;
+    option.text = name;
+
+    domLocation.append(option);
+}
+function addCategory({ id, image, name }) {
+    const div = document.createElement('div');
+    div.dataset.id = id;
+    div.className = 'category';
+    div.innerHTML = `
+        <img alt="category" src="${image}">
+        <span>${name}</span>
+    `;
+
+    domCategories.append(div);
+}
+function addItem({ id, image, name, weight, price }) {
+    const div = document.createElement('div');
+    div.dataset.id = id;
+    div.className = 'item';
+    div.innerHTML = `
+        <div class="item__preview">
+            <img alt="${name}" src="${image}">
+        </div>
+        <h4>${name}</h4>
+        <h3 class="item__info">
+            ${serializeWeight(weight)},
+            ${price}$
+        </h3>
+        <button class="item__buy"></button>
+    `;
+
+    domCatalog.append(div);
+}
+
+let groceries = [];
+
+// Load content
+function loadLocations(locations) {
+    locations.forEach(addLocation);
+}
+function loadCategories() {
+    getData('api/categories.json', (data) => {
+        data.items.slice(0, 3).forEach(addCategory);
+    });
+}
+function loadItems() {
    getData('api/groceries.json', (data) => {
        groceries = data.items;
-       data.items.forEach((elem) => {
-           const {image, name, weight, price, id} = elem;
-           let div = document.createElement('div');
-           div.className = 'item';
-           div.innerHTML = `
-               <div class="item__preview">
-                   <img src="${image}" alt="item">
-               </div>
-               <h4>${name}</h4>
-               <h3 class="item__info">${serializeWeight(weight)}, ${price}$</h3>
-               <button class="item__buy" data-id="${id}"></button>
-           `;
-           document.querySelector('div.catalog').append(div);
-       });
+       data.items.slice(0, 4).forEach(addItem);
        listenBuy();
    });
 }
 
-function user() {
+function listenBuy() {
+    document.querySelectorAll('button.item__buy').forEach((elem) => {
+        elem.addEventListener('click', () => {
+            let id = Number(elem.dataset.id);
+            let object = groceries.find((prod) => prod.id === id);
+            localStorage.setItem('product', JSON.stringify(object));
+            location.assign('product.html')
+        });
+    });
+}
+
+function userData() {
     let welcome = ['good night', 'good morning', 'good afternoon', 'good evening', 'good evening'];
     let hours = (new Date()).getHours();
     if (localStorage.getItem('user') === null) {
@@ -60,20 +97,10 @@ function user() {
         div.querySelector('img.user__avatar').src = user.avatar;
         div.querySelector('.user__name').innerHTML = user.first_name + ' ' + user.last_name;
         div.querySelector('.user__welcome').innerHTML = welcome[Math.round((hours + 1) / 6)];
+        loadLocations(user.locations);
     });
 }
 
-function listenBuy() {
-    document.querySelectorAll('button.item__buy').forEach((elem) => {
-        elem.addEventListener('click', () => {
-            let id = Number(elem.dataset.id);
-            let object = groceries.find((prod) => prod.id === id);
-            localStorage.setItem('product', JSON.stringify(object));
-            location.assign('product.html')
-        });
-    });
-}
-
-user();
-addCategories();
-addItems();
+userData();
+loadCategories();
+loadItems();
