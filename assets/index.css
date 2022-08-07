@@ -177,8 +177,8 @@ a[href] {
 .category {
     display: inline-grid;
     gap: 8px;
-    text-align: center;
     text-transform: capitalize;
+    justify-items: center;
 }
 
 .category img {

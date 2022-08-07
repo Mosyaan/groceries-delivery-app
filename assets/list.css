@@ -1,0 +1,79 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    font-size: 20px;
+    margin: 24px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    flex: 1;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+    width: 44px;
+    height: 44px;
+    border: 1px solid #F1F1F5;
+    background: transparent;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.list {
+    display: grid;
+}
+
+.item {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 8px;
+}
+
+.item__preview {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.item__preview img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.item > *:nth-child(2) {
+    flex: 1;
+}
+
+.item__info > * {
+    margin: 0;
+}
+
+.item__info > h3 {
+    color: #FF324B;
+}
+
+.item__buy {
+    width: 36px;
+    height: 36px;
+    background: #23AA49 url("img/plus.svg") no-repeat center;
+    border: none;
+    outline: rgba(35, 170, 73, 0.50);
+    border-radius: 100%;
+}

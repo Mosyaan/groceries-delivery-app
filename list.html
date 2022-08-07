@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Groceries</title>
+    <link href="assets/list.css" rel="stylesheet">
+    <meta content="width=device-width, initial-size=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script defer src="list.js"></script>
+</head>
+<body>
+    <header>
+        <button onclick="location.assign('index.html')" class="material-symbols-outlined">arrow_back_ios_new</button>
+        <a>List</a>
+    </header>
+    <div class="list">
+        <div class="item">
+            <div class="item__preview">
+                <img src="assets/img/default_item.png">
+            </div>
+            <div class="item__info">
+                <h4>Name</h4>
+                <h3>Description</h3>
+            </div>
+            <button class="item__buy"></button>
+        </div>
+        <div class="item">
+            <div class="item__preview">
+                <img src="assets/img/default_category.svg">
+            </div>
+            <div class="item__info">
+                <h4>Name</h4>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
